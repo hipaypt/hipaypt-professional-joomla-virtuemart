@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<install version="1.5" type="plugin" group="vmpayment">
+  <name>Hipay Wallet</name>
+  <creationDate>October 1 2015</creationDate>
+  <author>HI-PAY PORTUGAL</author>
+  <authorUrl>http://www.hipaywallet.net</authorUrl>
+  <copyright>Copyright (C) 2015 Hi-Pay Portugal. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <version>1.0.0</version>
+  <description>Hipay Wallet Payment plugin</description>
+
+  <files>
+      <filename plugin="hipay">hipay.php</filename>
+  </files>
+
+  <languages>
+    <language tag="en-GB">en-GB.plg_vmpayment_hipay.ini</language>
+    <language tag="en-GB">en-GB.plg_vmpayment_hipay.sys.ini</language>
+    <language tag="en-US">en-US.plg_vmpayment_hipay.ini</language>
+    <language tag="en-US">en-US.plg_vmpayment_hipay.sys.ini</language>
+    <language tag="pt-PT">pt-PT.plg_vmpayment_hipay.ini</language>
+    <language tag="pt-PT">pt-PT.plg_vmpayment_hipay.sys.ini</language>
+  </languages>
+
+  <params addpath="/administrator/components/com_virtuemart/elements" >
+
+  <param type="vmjpluginwarning" />
+
+    <param type="spacer" defalut=""  level="level1" />
+    
+    <param name="payment_currency" type="vmacceptedcurrency" default="" label="VMPAYMENT_HIPAY_CURRENCY" description="  " />
+
+    <param type="spacer" defalut=""  level="level1" />
+
+    <param name="status_pending" type="text" size="10" default="U" label="VMPAYMENT_HIPAY_STATUS_PENDING" description=""/>
+    <param type="spacer" defalut=""  level="level1" />
+    
+    <param name="rating" type="radio" default="ALL" label="VMPAYMENT_HIPAY_RATING" description="VMPAYMENT_HIPAY_RATING_TIP">
+                    <option value="ALL">ALL</option>
+                    <option value="+12">+12</option>
+                    <option value="+16">+16</option>
+                    <option value="+18">+18</option>
+    </param>
+    <param type="spacer" defalut=""  level="level1" />
+
+    <param name="defaultLang" type="radio" default="pt_PT" label="VMPAYMENT_HIPAY_DEFAULT_LANG" description="">
+                    <option value="pt_PT">pt_PT</option>
+                    <option value="fr_FR">fr_FR</option>
+                    <option value="fr_BE">fr_BE</option>
+                    <option value="en_GB">en_GB</option>
+                    <option value="en_US">en_US</option>
+                    <option value="es_ES">es_ES</option>
+                    <option value="de_DE">de_DE</option>
+                    <option value="pt_BR">pt_BR</option>
+                    <option value="nl_NL">nl_NL</option>
+                    <option value="nl_BE">nl_BE</option>
+    </param>
+    <param type="spacer" defalut=""  level="level1" />
+
+    <param name="account_sandbox" type="list" default="0" label="VMPAYMENT_HIPAY_SANDBOX" description="VMPAYMENT_HIPAY_SANDBOX_TIP">
+                    <option value="0">VMPAYMENT_HIPAY_NO</option>
+                    <option value="1">VMPAYMENT_HIPAY_YES</option>
+    </param>
+    <param type="spacer" defalut=""  level="level1" />
+
+
+
+    <param name="account_number" type="text" size="13"  label="VMPAYMENT_HIPAY_ACCOUNTID" description="" />
+    <param type="spacer" defalut=""  level="level1" />
+
+    <param name="account_website" type="text" size="13"  label="VMPAYMENT_HIPAY_WEBSITEID" description=""/>
+    <param type="spacer" defalut=""  level="level1" />
+
+    <param name="account_password" type="text" size="13"  label="VMPAYMENT_HIPAY_PASSWORD" description="" />
+    <param type="spacer" defalut=""  level="level1" />
+
+    <param name="account_category" type="text" size="13"  label="VMPAYMENT_HIPAY_CATEGORY" description=""/>
+    <param type="spacer" defalut=""  level="level1" />
+
+    <param name="account_shopid" type="text" size="13"  label="VMPAYMENT_HIPAY_SHOPID" description=""/>
+    <param type="spacer" defalut=""  level="level1" />
+
+    <param name="account_email" type="text" size="13"  label="VMPAYMENT_HIPAY_EMAIL" description=""/>
+    <param type="spacer" defalut=""  level="level1" />
+
+    <param  name="payment_logos" type="vmfiles" label="VMPAYMENT_HIPAY_LOGOS" description="VMPAYMENT_HIPAY_LOGOS_TIP" directory="/images/stories/virtuemart/payment" default="default" hide_default="1" hide_none="1" stripext="0" exclude="^_" />
+    <param type="spacer" defalut=""  level="level1" />
+    
+    <param name="payment_title" type="text" size="53"  label="VMPAYMENT_HIPAY_PAYMENTTITLE" description=""/>
+    <param type="spacer" defalut=""  level="level1" />
+
+    <param name="payment_info" type="text" size="53"  label="VMPAYMENT_HIPAY_PAYMENTINFO" description=""/>
+    <param type="spacer" defalut=""  level="level1" />
+
+ 
+    <param name="countries" type="vmcountries"  scope="com_virtuemart"  label="VMPAYMENT_HIPAY_COUNTRIES" description="VMPAYMENT_HIPAY_COUNTRIES_TIP"/>
+    <param type="spacer" defalut=""  level="level1" />
+
+    <param name="min_amount" type="text"  label="VMPAYMENT_HIPAY_MIN_AMOUNT" description="" />
+    <param type="spacer" defalut=""  level="level1" />
+    
+    <param name="max_amount" type="text"  label="VMPAYMENT_HIPAY_MAX_AMOUNT" description="" />
+    <param type="spacer" defalut=""  level="level1" />
+
+  </params>
+
+</install>

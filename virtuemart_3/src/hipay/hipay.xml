@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmpayment" method="upgrade">
+    <name>Hipay Wallet</name>
+    <creationDate>October 1 2015</creationDate>
+    <author>HI-PAY PORTUGAL</author>
+    <authorUrl>http://www.hipaywallet.net</authorUrl>
+    <copyright>Copyright (C) 2015 Hi-Pay Portugal. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>1.0.0</version>
+    <description>Hipay Wallet Payment plugin</description>
+
+    <files>
+        <filename plugin="hipay">hipay.php</filename>
+        <folder>language</folder>
+    </files>
+
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="payment" addfieldpath="/administrator/components/com_virtuemart/fields">
+
+                <!--<field name="payment_currency" type="vmacceptedcurrency" default="" label="VMPAYMENT_HIPAY_CURRENCY"
+                       description="VMPAYMENT_HIPAY_CURRENCY_TIP"/>-->
+
+                <field name="payment_currency" type="text" value="EUR" label="VMPAYMENT_HIPAY_CURRENCY"
+                       description="VMPAYMENT_HIPAY_CURRENCY_TIP"/>
+
+                <field name="status_pending" type="vmorderstate" scope="com_virtuemart" default="U"
+                       label="VMPAYMENT_HIPAY_STATUS_PENDING" description="VMPAYMENT_HIPAY_STATUS_PENDING_TIP"/>
+
+                <field name="rating" type="radio" scope="com_virtuemart" default="1"
+                       label="VMPAYMENT_HIPAY_RATING"
+                       description="VMPAYMENT_HIPAY_RATING_TIP">
+                    <option value="ALL">ALL</option>
+                    <option value="+12">+12</option>
+                    <option value="+16">+16</option>
+                    <option value="+18">+18</option>
+                </field>
+
+                <field name="defaultLang" type="radio" scope="com_virtuemart" default="1"
+                       label="VMPAYMENT_HIPAY_DEFAULT_LANG"
+                       description="">
+                    <option value="pt_PT">pt_PT</option>
+                    <option value="fr_FR">fr_FR</option>
+                    <option value="fr_BE">fr_BE</option>
+                    <option value="en_GB">en_GB</option>
+                    <option value="en_US">en_US</option>
+                    <option value="es_ES">es_ES</option>
+                    <option value="de_DE">de_DE</option>
+                    <option value="pt_BR">pt_BR</option>
+                    <option value="nl_NL">nl_NL</option>
+                    <option value="nl_BE">nl_BE</option>
+                </field>
+
+            </fieldset>
+
+
+            <fieldset name="account">
+
+
+               <field name="account_sandbox" type="list" default="0" label="VMPAYMENT_HIPAY_SANDBOX" description="VMPAYMENT_HIPAY_SANDBOX_TIP">
+                    <option value="0">VMPAYMENT_HIPAY_NO</option>
+                    <option value="1">VMPAYMENT_HIPAY_YES</option>
+                </field>
+
+                <field name="account_number" type="text" label="VMPAYMENT_HIPAY_ACCOUNTID"
+                       description="VMPAYMENT_HIPAY_ACCOUNTID"/>
+
+                <field name="account_website" type="text" label="VMPAYMENT_HIPAY_WEBSITEID"
+                       description="VMPAYMENT_HIPAY_WEBSITEID"/>
+
+                <field name="account_password" type="text" label="VMPAYMENT_HIPAY_PASSWORD"
+                       description="VMPAYMENT_HIPAY_PASSWORD"/>
+
+                <field name="account_category" type="text" label="VMPAYMENT_HIPAY_CATEGORY"
+                       description="VMPAYMENT_HIPAY_CATEGORY"/>
+
+                <field name="account_shopid" type="text" label="VMPAYMENT_HIPAY_SHOPID"
+                       description="VMPAYMENT_HIPAY_SHOPID_TIP"/>
+
+                <field name="account_email" type="text" label="VMPAYMENT_HIPAY_EMAIL"
+                       description="VMPAYMENT_HIPAY_EMAIL_TIP"/>
+
+                <field name="account_storelogo" type="text" label="VMPAYMENT_HIPAY_STORELOGO"
+                       description="VMPAYMENT_HIPAY_STORELOGO_TIP"/>
+
+            </fieldset>
+
+
+            <fieldset name="template">
+                <field name="payment_logos" type="vmfiles" multiple="true" directory="/images/stories/virtuemart/payment"
+                       hide_none="1" label="VMPAYMENT_HIPAY_LOGOS"
+                       size="40"
+                       description="VMPAYMENT_HIPAY_LOGOS_TIP"/>
+
+                <field name="payment_title" type="text" label="VMPAYMENT_HIPAY_PAYMENTTITLE"
+                       description="VMPAYMENT_HIPAY_PAYMENTTITLE_TIP"/>
+
+                <field name="payment_info" type="textarea" cols="35" rows="5" label="VMPAYMENT_HIPAY_PAYMENTINFO"
+                       description="VMPAYMENT_HIPAY_PAYMENTINFO_TIP"/>
+            </fieldset>
+
+
+            <fieldset name="restrictions" >
+                <field name="countries" multiple="true" type="vmcountries" scope="com_virtuemart" default=""
+                       label="VMPAYMENT_HIPAY_COUNTRIES" description="VMPAYMENT_HIPAY_COUNTRIES_TIP"/>
+                <field name="min_amount" type="text" label="VMPAYMENT_HIPAY_MIN_AMOUNT"
+                       description="VMPAYMENT_HIPAY_MIN_AMOUNT_TIP"/>
+                <field name="max_amount" type="text" label="VMPAYMENT_HIPAY_MAX_AMOUNT"
+                       description="VMPAYMENT_HIPAY_MAX_AMOUNT_TIP"/>
+            </fieldset>
+
+        </fields>
+    </vmconfig>
+
+</extension>
